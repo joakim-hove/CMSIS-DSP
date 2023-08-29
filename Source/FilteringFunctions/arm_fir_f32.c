@@ -943,13 +943,15 @@ void arm_fir_f32(
    */
 
   blkCnt = blockSize >> 3U;
+  printf("arm_fir_f32() \n");
+
 
   while (blkCnt > 0U)
   {
     /* Copy 4 new input samples into the state buffer. */
-    printf("arm_fir_f32() \n");
     printf("numTaps: %d \n", numTaps);
     printf("blkcnt: %d\n",blkCnt);
+    printf("Current state_index: %ld \n", pstateCurnt - S->pState);
     *pStateCurnt++ = *pSrc++;
     *pStateCurnt++ = *pSrc++;
     *pStateCurnt++ = *pSrc++;

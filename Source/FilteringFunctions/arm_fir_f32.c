@@ -951,7 +951,7 @@ void arm_fir_f32(
     /* Copy 4 new input samples into the state buffer. */
     printf("numTaps: %d \n", numTaps);
     printf("blkcnt: %d\n",blkCnt);
-    printf("Current state_index: %ld \n", pstateCurnt - S->pState);
+    printf("Current state_index: %ld \n", pStateCurnt - S->pState);
     *pStateCurnt++ = *pSrc++;
     *pStateCurnt++ = *pSrc++;
     *pStateCurnt++ = *pSrc++;
